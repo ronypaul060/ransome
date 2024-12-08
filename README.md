@@ -13,7 +13,7 @@ Its use is free, however the author doesn't take responsibility for any illegal 
 To setup the tool just run
 
 ```bash
-go install github.com/marmos91/ransomware@latest
+go install github.com/ronypaul060/ransome@latest
 ```
 
 ### Setup locally
@@ -30,16 +30,6 @@ In order to demonstrate the way ransomware works quickly and in a protected envi
 This way the process takes much less time (the entire operating system does not need to be encrypted).
 Writing this tool in Go, also **allows the tool to be developed even in a non-Windows environment** (by far the most supported operating system by ransomware available online)
 
-## Demo
-
-This project was used to showcase the resilience of [Cubbit](https://www.cubbit.io)'s object storage to this type of attack, demonstrating how it is possible to defend against such a tool using.
-Cubbit's features ([versioning](https://docs.cubbit.io/guides/bucket-and-object-versioning), [object locking](https://docs.cubbit.io/guides/object-lock)).
-
-The whole thing is available in a video demo that can be found [here](https://www.youtube.com/watch?v=w4vfng17eYg).
-
-[![Watch the video](https://markdown-videos.vercel.app/youtube/w4vfng17eYg)](https://youtu.be/w4vfng17eYg)
-
-The restore tool used in the demo is available [here](https://github.com/marmos91/s3restore).
 
 ## How to use it
 
@@ -61,7 +51,7 @@ VERSION:
    v1.0.0
 
 AUTHOR:
-   Marco Moschettini <marco.moschettini@cubbit.io>
+   Rony Paul <ronypaul060@hotmail.com>
 
 COMMANDS:
    create-keys, c  Generates a new random keypair and saves it to a file
