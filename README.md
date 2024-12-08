@@ -42,10 +42,10 @@ This tool is used to simulate a ransomware attack. With it you can perform the f
 
 ```bash
 NAME:
-   ransomware - A simple demonstration tool to simulate a ransomware attack
+   ransome - A simple demonstration tool to simulate a ransomware attack
 
 USAGE:
-   ransomware [global options] command [command options] [arguments...]
+   ransome [global options] command [command options] [arguments...]
 
 VERSION:
    v1.0.0
@@ -70,7 +70,7 @@ GLOBAL OPTIONS:
 First thing you need to do is to create a keypair. You can do it by running
 
 ```bash
-ransomware create-keys --path ~/Desktop
+ransome create-keys --path ~/Desktop
 ```
 
 If you don't specifiy a path it will create the keys in `pwd`.
@@ -87,10 +87,10 @@ With this command you can recursively encrypt every file inside a specified dire
 
 ```bash
 NAME:
-   ransomware encrypt - Encrypts a directory
+   ransome encrypt - Encrypts a directory
 
 USAGE:
-   ransomware encrypt [command options] [arguments...]
+   ransome encrypt [command options] [arguments...]
 
 OPTIONS:
    --path value, -p value      Runs the tool on a directory
@@ -111,7 +111,7 @@ OPTIONS:
 For example if you want to run the tool on the `~/Documents` folder run:
 
 ```bash
-ransomware encrypt --publicKey ./pub.pem --path ~/Documents
+ransome encrypt --publicKey ./pub.pem --path ~/Documents
 ```
 
 This command provides the following options:
@@ -134,19 +134,19 @@ This command provides the following options:
 Just encrypt gif files on Desktop
 
 ```bash
-ransomware encrypt --publicKey ./pub.pem --path ~/Desktop --extWhitelist .gif
+ransome encrypt --publicKey ./pub.pem --path ~/Desktop --extWhitelist .gif
 ```
 
 Encrypt everything except `.csv` and `.pdf` files
 
 ```bash
-ransomware encrypt --publicKey ./pub.pem --path ~/Desktop --extBlacklist .csv,.pdf
+ransome encrypt --publicKey ./pub.pem --path ~/Desktop --extBlacklist .csv,.pdf
 ```
 
 Encrypt everything and add a ransom file
 
 ```bash
-ransomware encrypt --publicKey ./pub.pem --path ~/Desktop --addRansom --ransomTemplatePath ./ransom/IMPORTANT.txt
+ransome encrypt --publicKey ./pub.pem --path ~/Desktop --addRansom --ransomTemplatePath ./ransom/IMPORTANT.txt
 ```
 
 ### Ransom file
@@ -175,10 +175,10 @@ With this command you can decrypt a folder back to its original form after a vic
 
 ```bash
 NAME:
-   ransomware decrypt - Decrypts a directory
+   ransome decrypt - Decrypts a directory
 
 USAGE:
-   ransomware decrypt [command options] [arguments...]
+   ransome decrypt [command options] [arguments...]
 
 OPTIONS:
    --path value, -c value  Runs the tool on a directory
@@ -192,7 +192,7 @@ OPTIONS:
 For example if you want to run the tool on the `~/Documents` folder run:
 
 ```bash
-ransomware decrypt --privateKey ./priv.pem --path ~/Desktop/toEncrypt
+ransome decrypt --privateKey ./priv.pem --path ~/Desktop/toEncrypt
 ```
 
 This command provides the following options:
