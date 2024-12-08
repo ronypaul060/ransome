@@ -1,4 +1,4 @@
-module github.com/marmos91/ransomware
+module github.com/ronypaul060/ransome
 
 go 1.19
 
