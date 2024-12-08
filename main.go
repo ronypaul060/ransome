@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/common-nighthawk/go-figure"
-	"github.com/marmos91/ransomware/cli"
-	"github.com/marmos91/ransomware/utils"
+	"github.com/ronypaul060/ransome/cli"
+	"github.com/ronypaul060/ransome/utils"
 	urfavecli "github.com/urfave/cli/v2"
 )
 
@@ -35,8 +35,8 @@ func main() {
 		Compiled: time.Now(),
 		Authors: []*urfavecli.Author{
 			{
-				Name:  "Marco Moschettini",
-				Email: "marco.moschettini@cubbit.io",
+				Name:  "Rony Paul",
+				Email: "ronypaul060@hotmail.com",
 			},
 		},
 		Flags: []urfavecli.Flag{
